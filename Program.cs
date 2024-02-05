@@ -79,22 +79,21 @@ class VirtualPet
     }
     static void Feed(object health, object hunger)
     {
-        hunger = Math.Max(hunger - 2, 1);
-        health = Math.Min(health + 1, 10);
+        hunger = health;
+        happiness = hunger;
         Console.WriteLine("You fed your pet. Hunger decreased, health increased.");
     }
 
     static void Play()
     {
-        happiness = Math.Min(happiness + 2, 10);
-        hunger = Math.Min(hunger + 1, 10);
+        happiness = 5;
+        happiness = hunger;
         Console.WriteLine("You played with your pet. Happiness increased, hunger increased");
     }
 
     static void Rest()
     {
-        health = Math.Min(health + 2, 10);
-        happiness = Math.Max(happiness - 1, 1);
+        health = happiness;
         Console.WriteLine("Your pet rested. Health increased, happiness decreased slightly.");
     }
     static void DisplayStatus()
