@@ -52,7 +52,7 @@ class VirtualPet
 
             switch (actionChoice)
             {
-                case 1: Feed(health);
+                case 1: Feed(health, hunger);
                     break;
                 case 2:
                     Play();
@@ -77,7 +77,7 @@ class VirtualPet
         static int happiness = 5;
         static int health = 5;
     }
-    static void Feed(object health)
+    static void Feed(object health, object hunger)
     {
         hunger = Math.Max(hunger - 2, 1);
         health = Math.Min(health + 1, 10);
